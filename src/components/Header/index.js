@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Logo from "./Logo";
-import { DribbbleIcon, GithubIcon, LinkedinIcon, SunIcon, TwitterIcon } from "@/src/components/Header/Icons";
+import { DribbbleIcon, GithubIcon, LinkedinIcon, SunIcon, TwitterIcon } from "@/src/components/Icons";
 
 const Header = () => {
   return (
