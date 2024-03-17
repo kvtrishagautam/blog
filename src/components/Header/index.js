@@ -15,10 +15,10 @@ const Header = () => {
             </button>
         </nav>
         <div className="flex "> 
-            <a href="" className="inline block w-9 h-9 mr-4"><LinkedinIcon className="hover:scale-125 transition-all ease duration-200" /></a>
-            <a href="" className="inline block w-9 h-9 mr-4"><TwitterIcon  className="hover:scale-125 transition-all ease duration-200"/></a>
-            <a href="" className="inline block w-9 h-9 mr-4"><GithubIcon   className="hover:scale-125 transition-all ease duration-200"/> </a>
-            <a href="" className="inline block w-9 h-9 mr-4"><DribbbleIcon className="hover:scale-125 transition-all ease duration-200"/></a>
+            <a href="" className="inline-block w-9 h-9 mr-4"><LinkedinIcon className="hover:scale-125 transition-all ease duration-200" /></a>
+            <a href="" className="inline-block w-9 h-9 mr-4"><TwitterIcon  className="hover:scale-125 transition-all ease duration-200"/></a>
+            <a href="" className="inline-block w-9 h-9 mr-4"><GithubIcon   className="hover:scale-125 transition-all ease duration-200"/> </a>
+            <a href="" className="inline-block w-9 h-9 mr-4"><DribbbleIcon className="hover:scale-125 transition-all ease duration-200"/></a>
         </div>
     </header>
   )
