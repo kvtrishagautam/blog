@@ -1,6 +1,8 @@
 "use client"
 import React from 'react'
 import { useForm } from 'react-hook-form';
+import { DribbbleIcon, GithubIcon, LinkedinIcon, TwitterIcon } from '../Icons';
+import Link from 'next/link';
 
 const Footer = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -19,7 +21,7 @@ const Footer = () => {
         >
         <input 
             type="email"
-            placeholder="email"
+            placeholder="Enter your E-mail"
             {...register("email", {required: true, max: 12, min: 7, maxLength: 80, pattern: /^\S+@\S+$/i})} 
             className="w-full bg-transparent pl-2 sm:pl-0 text-dark focus:border-dark focus:ring-0 border-0 border-b mr-2 pb-1"
         />
@@ -28,7 +30,24 @@ const Footer = () => {
         className="bg-dark text-light cursor-pointer font-medium rounded px-3 sm:px-5 py-1"
         />
     </form>
+    <div className="flex items-centre mt-8"> 
+            <a href="" className="inline block w-9 h-9 mr-4"><LinkedinIcon className="hover:scale-125 transition-all ease duration-200" /></a>
+            <a href="" className="inline block w-9 h-9 mr-4"><TwitterIcon  className="hover:scale-125 transition-all ease duration-200"/></a>
+            <a href="" className="inline block w-9 h-9 mr-4 fill-light"><GithubIcon   className="hover:scale-125 transition-all ease duration-200"/> </a>
+            <a href="" className="inline block w-9 h-9 mr-4"><DribbbleIcon className="hover:scale-125 transition-all ease duration-200"/></a>
+        </div>
 
+        <div className='w-full mt-24 relative font-medium border-t border-solid border-light py-6 px-8 flex flex-row items-center justify-between'>
+            <span className='text-centre'>
+                &copy;2023 CodeBucks. All rights reserved.
+            </span>
+            <Link href="/sitemap.xml" className='text-center underline'>
+                sitemap.xml
+            </Link>
+            <div className='text-center'>
+                made with &hearts; by <a href='#'className='underline'>Trisha</a>
+            </div>
+        </div>
     </footer>
   )
 }
