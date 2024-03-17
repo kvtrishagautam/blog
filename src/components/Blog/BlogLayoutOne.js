@@ -17,7 +17,7 @@ const BlogLayoutOne = ({blog}) => {
             alt={blog.title}
             width={blog.image.width}
             height={blog.image.height}
-            className='w-full h-full object-centre object-cover rounded-xl'
+            className='w-full h-full object-centre object-cover rounded-xl group-hover:scale-110 transition-all ease duration-300'
         />
 
         <div className='w-full absolute bottom-0 p-10 z-20 '>
@@ -26,8 +26,8 @@ const BlogLayoutOne = ({blog}) => {
             />
             <Link href={blog.url} className='mt-6'>
             <h2 className='font-bold capitalize text-2xl text-light mt-4'>
-                <span className='bg-gradient-to-r from-accent to-accent  bg-[length:0px_6px]
-                hover:bg-[length:100%_6px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 '>
+                <span className='bg-gradient-to-r from-accent to-accent  bg-[length:0px_4px]
+                group-hover:bg-[length:100%_4px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 '>
                     {blog.title}
                 </span>
             </h2>
