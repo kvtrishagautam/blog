@@ -7,7 +7,7 @@ const slugger = new GithubSlugger();
 
 export async function generateStaticParams() {
     const categories = [];
-    const paths = [{slug: "all"}]
+    const paths = [{slug: "all"}];
    
     allBlogs.map(blog =>{
         if(blog.isPublished){
@@ -24,7 +24,12 @@ export async function generateStaticParams() {
     return paths;
   }
 
-
+  export async function generateMetadata({ params }) {
+    return {
+      title: `${params.slug.replaceAll("-"," ")} Blogs`,
+      description: `Learn more about ${params.slug === "all" ? "web development" : params.slug} through our collection of expert blogs and tutorials`,
+    };
+  }
 
 const Categorypage = ({params}) => {
 
