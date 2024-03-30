@@ -4,6 +4,8 @@ import { Inter, Manrope } from 'next/font/google'
 import Header from '@/src/components/Header'
 import Footer from '../components/Footer'
 import siteMetadata from '../utils/siteMetaData'
+import ThemeScript from '../components/ThemeScript'
+
 
 
 const inter = Inter({ subsets: ['latin'] ,display:"swap", variable: "--font-in"})
@@ -54,9 +56,12 @@ export default function RootLayout({ children }) {
       className={cx(
         inter.variable,
         manrope.variable,
-        "font-mr bg-light"
+        "font-mr bg-light dark:bg-dark"
       )}
       >
+        <ThemeScript />
+
+    
       <Header />
       {children}
       <Footer />

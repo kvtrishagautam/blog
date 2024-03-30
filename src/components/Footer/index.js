@@ -10,7 +10,7 @@ const Footer = () => {
     const onSubmit = data => console.log(data);
     console.log(errors);
   return (
-    <footer className="mt-16 rounded-2xl bg-dark  m-2 sm:m-10 flex flex-col items-center text-light">
+    <footer className="mt-16 rounded-2xl bg-dark dark:bg-accentDark/90 m-2 sm:m-10 flex flex-col items-center text-light dark:text-dark">
         <h3 className="mt-16 font-medium dark:font-bold text-center capitalize text-2xl sm:text-3xl lg:text-4xl px-4">
         Interesting Stories | Updates | Guides
         </h3>
@@ -18,7 +18,7 @@ const Footer = () => {
         Subscribe to learn about new technology and updates. Join over 5000+ members community to stay up to date with latest news.
         </p>
         <form onSubmit={handleSubmit(onSubmit)}
-        className="mt-6 w-fit sm:min-w-[384px] flex items-stretch bg-light p-1 sm:p-2 rounded mx04"
+        className="mt-6 w-fit sm:min-w-[384px] flex items-stretch bg-light dark:bg-dark p-1 sm:p-2 rounded mx04"
         >
         <input 
             type="email"
@@ -28,21 +28,21 @@ const Footer = () => {
         />
 
         <input type="submit"
-        className="bg-dark text-light cursor-pointer font-medium rounded px-3 sm:px-5 py-1"
+        className='bg-dark text-light dark:text-dark dark:bg-light cursor-pointer font-medium rounded px-3 sm:px-5 py-1'
         />
     </form>
     <div className="flex items-centre mt-8"> 
             <a href={siteMetadata.linkedin}  className="inline-block w-9 h-9 mr-4"><LinkedinIcon className="hover:scale-125 transition-all ease duration-200" /></a>
             <a href={siteMetadata.twitter}  className="inline-block w-9 h-9 mr-4"><TwitterIcon  className="hover:scale-125 transition-all ease duration-200"/></a>
-            <a href={siteMetadata.github}  className="inline-block w-9 h-9 mr-4 fill-light"><GithubIcon   className="hover:scale-125 transition-all ease duration-200"/> </a>
+            <a href={siteMetadata.github}  className="inline-block w-9 h-9 mr-4 fill-light"><GithubIcon   className="fill-light dark:fill-dark hover:scale-125 transition-all ease duration-200"/> </a>
             <a href={siteMetadata.dribbble}  className="inline-block w-9 h-9 mr-4"><DribbbleIcon className="hover:scale-125 transition-all ease duration-200"/></a>
         </div>
 
-        <div className='w-full mt-24 relative font-medium border-t border-solid border-light py-6 px-8 flex flex-row items-center justify-between'>
+        <div className='w-full  mt-16 md:mt-24 relative font-medium border-t border-solid border-light py-6 px-8 flex  flex-col md:flex-row items-center justify-between'>
             <span className='text-centre'>
                 &copy;2023 CodeBucks. All rights reserved.
             </span>
-            <Link href="/sitemap.xml" className='text-center underline'>
+            <Link href="/sitemap.xml" className='text-center underline my-4 md:my-0'>
                 sitemap.xml
             </Link>
             <div className='text-center'>
@@ -53,4 +53,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default Footer;
