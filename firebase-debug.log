@@ -1,0 +1,54 @@
+[debug] [2024-04-21T16:20:29.184Z] ----------------------------------------------------------------------
+[debug] [2024-04-21T16:20:29.187Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-04-21T16:20:29.187Z] CLI Version:   13.7.3
+[debug] [2024-04-21T16:20:29.187Z] Platform:      win32
+[debug] [2024-04-21T16:20:29.188Z] Node Version:  v20.12.0
+[debug] [2024-04-21T16:20:29.188Z] Time:          Sun Apr 21 2024 21:50:29 GMT+0530 (India Standard Time)
+[debug] [2024-04-21T16:20:29.188Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-04-21T16:20:29.274Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-21T16:20:29.274Z] > authorizing via signed-in user (kvtrishagautam@gmail.com)
+[debug] [2024-04-21T16:20:29.275Z] [iam] checking project blog-f0ca4 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-04-21T16:20:29.276Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/blog-f0ca4:testIamPermissions [none]
+[debug] [2024-04-21T16:20:29.276Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/blog-f0ca4:testIamPermissions x-goog-quota-user=projects/blog-f0ca4
+[debug] [2024-04-21T16:20:29.277Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/blog-f0ca4:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-04-21T16:20:30.942Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/blog-f0ca4:testIamPermissions 200
+[debug] [2024-04-21T16:20:30.943Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/blog-f0ca4:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-04-21T16:20:30.943Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/blog-f0ca4 [none]
+[debug] [2024-04-21T16:20:31.510Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/blog-f0ca4 200
+[debug] [2024-04-21T16:20:31.510Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/blog-f0ca4 {"projectId":"blog-f0ca4","projectNumber":"491955712472","displayName":"Blog","name":"projects/blog-f0ca4","resources":{"hostingSite":"blog-f0ca4"},"state":"ACTIVE","etag":"1_14261f6e-efeb-4e18-9bfe-d20138e70e30"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-04-21T16:20:42.527Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/blog-f0ca4/sites/blog-f0ca4 [none]
+[debug] [2024-04-21T16:20:43.662Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/blog-f0ca4/sites/blog-f0ca4 200
+[debug] [2024-04-21T16:20:43.662Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/blog-f0ca4/sites/blog-f0ca4 {"name":"projects/blog-f0ca4/sites/blog-f0ca4","defaultUrl":"https://blog-f0ca4.web.app","type":"DEFAULT_SITE"}
+[info]    Creating an optimized production build ...
+
+[info] Warning: Contentlayer might not work as expected on Windows
+
+[info] Generated 11 documents in .contentlayer
+
+[info] uncaughtException [Error: EPERM: operation not permitted, open 'C:\Users\USER\OneDrive\Desktop\Blog\Nextjs-contentlayer-blog\.next\trace'] {
+  errno: -4048,
+  code: 'EPERM',
+  syscall: 'open',
+  path: 'C:\\Users\\USER\\OneDrive\\Desktop\\Blog\\Nextjs-contentlayer-blog\\.next\\trace'
+}
+
+[debug] [2024-04-21T16:20:50.251Z] SyntaxError: C:\Users\USER\OneDrive\Desktop\Blog\Nextjs-contentlayer-blog\.next\server\middleware-manifest.json: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at _readFile (C:\Users\USER\AppData\Roaming\nvm\v20.12.0\node_modules\firebase-tools\node_modules\jsonfile\index.js:25:16)
+    at async isUsingMiddleware (C:\Users\USER\AppData\Roaming\nvm\v20.12.0\node_modules\firebase-tools\lib\frameworks\next\utils.js:86:36)
+    at async build (C:\Users\USER\AppData\Roaming\nvm\v20.12.0\node_modules\firebase-tools\lib\frameworks\next\index.js:77:9)
+    at async prepareFrameworks (C:\Users\USER\AppData\Roaming\nvm\v20.12.0\node_modules\firebase-tools\lib\frameworks\index.js:224:33)
+    at async deploy (C:\Users\USER\AppData\Roaming\nvm\v20.12.0\node_modules\firebase-tools\lib\deploy\index.js:55:13)
+[error] 
+[error] Error: An unexpected error has occurred.
