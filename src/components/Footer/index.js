@@ -40,7 +40,7 @@ const Footer = () => {
 
         <div className='w-full  mt-16 md:mt-24 relative font-medium border-t border-solid border-light py-6 px-8 flex  flex-col md:flex-row items-center justify-between'>
             <span className='text-centre'>
-                &copy;2023 CodeBucks. All rights reserved.
+                &copy;2023 TuteMe. All rights reserved.
             </span>
             <Link href="/sitemap.xml" className='text-center underline my-4 md:my-0'>
                 sitemap.xml
